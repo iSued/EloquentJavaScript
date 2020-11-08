@@ -44,7 +44,41 @@ function power(base, exponent) {
   }
 }
 
-console.log(power(2, 3));
-arr = [1, 2, 3, 4, 5, 6, 6, 7, 8];
-darr = String(arr);
-console.log(Math.min(arr));
+console.log(power(2, 3)); //more similar to way mathematicians define a power and this is a recursion. 
+//find all numbers by starting from 1 and adding 5 or myltiplyng * 3 !!USING RECURSION WITH IF LOOP!!
+
+var findSolution = function findSolution(target) {
+  var find = function find(current, history) {
+    if (current == target) {
+      return history;
+    } else if (current > target) {
+      return null;
+    } else {
+      return find(current + 5, "(".concat(history, " + 5)")) || find(current * 3, "(".concat(history, " * 3)"));
+    }
+  };
+
+  return find(1, "1");
+};
+
+console.log(findSolution(24)); //Growing functions
+//print the number of cows and chickens on a farm.
+
+function printFarmInventory(cows, chickens) {
+  var cowString = String(cows);
+
+  while (cowString.length < 3) {
+    cowString = "0" + cowString;
+  }
+
+  console.log("".concat(cowString, " Cows"));
+  var chickenString = String(chickens);
+
+  while (chickenString.length < 3) {
+    chickenString = "0" + chickenString;
+  }
+
+  console.log("".concat(chickenString, " Chickens"));
+}
+
+printFarmInventory(7, 11);

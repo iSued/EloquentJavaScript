@@ -1,6 +1,6 @@
 "use strict";
 
-console.log(Number.isInteger(23));
+console.log(Number.isInteger(23.1));
 var result = 1;
 var count = 0;
 

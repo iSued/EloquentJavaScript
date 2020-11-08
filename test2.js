@@ -1,4 +1,4 @@
-console.log(Number.isInteger(23));
+console.log(Number.isInteger(23.1));
 
 let result = 1;
 let count = 0;
