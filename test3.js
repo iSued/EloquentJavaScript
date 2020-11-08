@@ -66,9 +66,10 @@ function printFarmInventory(cows, chickens) {
     }
     console.log(`${chickenString} Chickens`);
 }
-printFarmInventory(7, 11, 90);
+printFarmInventory(7, 11);
 
 //instead of add every time other lines of codes
+//create a reusable function 
 function printZeroPaddedWithLabel(number, label) {
     let numberString = String(number);
     while (numberString.length < 3) {
@@ -76,9 +77,78 @@ function printZeroPaddedWithLabel(number, label) {
     }
     console.log(`${numberString} ${label}`);
 }
-
-function printFarmInventory(cows, chickens, pigs) {
+//call the previous function for every animal with different labels.
+function printFarmInventory1(cows, chickens, pigs) {
     printZeroPaddedWithLabel(cows, "Cows");
     printZeroPaddedWithLabel(chickens, "Chickens");
     printZeroPaddedWithLabel(pigs, "Pigs");
 }
+printFarmInventory1(1, 2, 3);
+//printZeroPaddedWithLabel is not a proper name to call a function !!AWKARD!!
+//better way and cleaner to build this code !!MORE READABLE AND REUSABLE!!
+function zeroPad(number, width) {
+    let string = String(number);
+    while (string.length < width) {
+        string = "0" + string;
+    }
+    return string;
+}
+
+function printFarmInventory2(cows, chickens, pigs) {
+    console.log(`${zeroPad(cows, 3)} Cows`);
+    console.log(`${zeroPad(chickens, 3)} Chickens`);
+    console.log(`${zeroPad(pigs, 3)} Pigs`);
+}
+
+printFarmInventory2(7, 16, 3);
+
+
+//Exercises
+//MINIMUM write a function min that take two arguments and return their minimum.
+//my solution 
+const min = function (a, b) {
+    return Math.min(a, b);
+}
+console.log(min(10, 2));
+//Eloquent solution
+function min1(a, b) {
+    if (a < b) return a;
+    else return b;
+
+}
+//RECURSION 
+//---another way to see if a number is even or odd---
+//Zero is even---One is odd---for any other number N, its evenness is the same as N-2
+//Define a recursive function corresponding to the previous description of the problem---How the function behave on -1 <----FIX
+//eloquent solution 
+function isEven(n) {
+    if (n == 0) return true;
+    else if (n == 1) return false;
+    else if (n < 0) return isEven(-n);
+    else return isEven(n - 2);
+}
+/*Descrizione della soluzione*/
+// BEAN COUNTING
+//probably a recursive function 
+//string.lenght last position = string.lenght-1 
+//Eloquent's solution 
+function countChar(string, z) {
+    let counted = 0;
+    for (let i = 0; i < string.length; i++) {
+        2
+        if (string[i] == z) {
+            counted += 1;
+        }
+    }
+    return counted;
+}
+//ha più senso creare una funzione generica e richiamarla in un caso specifico
+
+function countBs(string) {
+    return countChar(string, "B");
+}
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
