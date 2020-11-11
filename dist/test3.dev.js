@@ -151,11 +151,10 @@ function isEven(n) {
 
 
 function countChar(string, z) {
+  // called for the value 
   var counted = 0;
 
   for (var i = 0; i < string.length; i++) {
-    2;
-
     if (string[i] == z) {
       counted += 1;
     }
@@ -166,6 +165,7 @@ function countChar(string, z) {
 
 
 function countBs(string) {
+  // called for the side effect
   return countChar(string, "B");
 }
 

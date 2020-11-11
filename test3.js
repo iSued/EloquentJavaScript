@@ -132,10 +132,9 @@ function isEven(n) {
 //probably a recursive function 
 //string.lenght last position = string.lenght-1 
 //Eloquent's solution 
-function countChar(string, z) {
+function countChar(string, z) { // called for the value 
     let counted = 0;
     for (let i = 0; i < string.length; i++) {
-        2
         if (string[i] == z) {
             counted += 1;
         }
@@ -144,7 +143,7 @@ function countChar(string, z) {
 }
 //ha più senso creare una funzione generica e richiamarla in un caso specifico
 
-function countBs(string) {
+function countBs(string) { // called for the side effect
     return countChar(string, "B");
 }
 
