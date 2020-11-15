@@ -70,3 +70,16 @@ console.log(objectA);
 
 let testarr = [1, 2, 3, 4, 5, 6, 7]
 console.log(typeof testarr);
+//mutability
+let object1 = {
+    value: 10
+};
+let object2 = object1;
+let object3 = {
+    value: 10
+};
+console.log(object1 == object2);
+console.log(object1 == object3);
+object1.value = 15;
+console.log(object2.value);
+console.log(object3.value);

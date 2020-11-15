@@ -66,4 +66,17 @@ console.log(objectB);
 Object.assign(objectA, objectB);
 console.log(objectA);
 var testarr = [1, 2, 3, 4, 5, 6, 7];
-console.log(_typeof(testarr));
+console.log(_typeof(testarr)); //mutability
+
+var object1 = {
+  value: 10
+};
+var object2 = object1;
+var object3 = {
+  value: 10
+};
+console.log(object1 == object2);
+console.log(object1 == object3);
+object1.value = 15;
+console.log(object2.value);
+console.log(object3.value);
