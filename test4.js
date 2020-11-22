@@ -8,8 +8,8 @@ let marco = "name";
 let sued = 2;
 
 let marco1 = {
-    name: "sued",
-    surname: "sinani"
+  name: "sued",
+  surname: "sinani",
 };
 console.log(marco1[marco]);
 let sued1 = [1, 2, 3, 4, 56, 7, 8, 9, 0];
@@ -23,12 +23,12 @@ let sequence = [1, 2, 3];
 sequence.push(4);
 sequence.push(5);
 console.log(sequence);
-console.log(sequence.pop())
+console.log(sequence.pop());
 console.log(sequence);
 
 let day1 = {
-    squirrel: false,
-    events: ["work", "touched tree", "pizza", "running"]
+  squirrel: false,
+  events: ["work", "touched tree", "pizza", "running"],
 };
 console.log(day1);
 console.log(day1.squirrel);
@@ -37,49 +37,56 @@ day1.wolf = false;
 console.log(day1);
 
 let descriptions = {
-    work: "went to work",
-    "touched tree": "touched a tree"
+  work: "went to work",
+  "touched tree": "touched a tree",
 };
 console.log(descriptions);
 console.log(descriptions["work"]);
 
 let anObject = {
-    left: 1,
-    right: 2
+  left: 1,
+  right: 2,
 };
 console.log(anObject.left);
 delete anObject.left;
 console.log(anObject.left);
 console.log("left" in anObject);
 console.log(Object.keys(anObject));
-console.log(anObject)
-let trystr = "sued"
+console.log(anObject);
+let trystr = "sued";
 //assign
 let objectA = {
-    a: 1,
-    b: 2,
-}
+  a: 1,
+  b: 2,
+};
 let objectB = {
-    b: 3,
-    c: 4
-}
+  b: 3,
+  c: 4,
+};
 console.log(objectA);
 console.log(objectB);
 Object.assign(objectA, objectB);
 console.log(objectA);
 
-let testarr = [1, 2, 3, 4, 5, 6, 7]
+let testarr = [1, 2, 3, 4, 5, 6, 7];
 console.log(typeof testarr);
 //mutability
 let object1 = {
-    value: 10
+  value: 10,
 };
 let object2 = object1;
 let object3 = {
-    value: 10
+  value: 10,
 };
 console.log(object1 == object2);
 console.log(object1 == object3);
 object1.value = 15;
-console.log(object2.value);
+console.log(object2.value); //changing the value of the object1 we change also the value of the object2
 console.log(object3.value);
+const c = 12;
+
+console.log(c);
+a = [1, 2, 3, 4, 5];
+let index = 0;
+a[index] += 2;
+console.log(a);

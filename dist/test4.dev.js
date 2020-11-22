@@ -78,5 +78,12 @@ var object3 = {
 console.log(object1 == object2);
 console.log(object1 == object3);
 object1.value = 15;
-console.log(object2.value);
+console.log(object2.value); //changing the value of the object1 we change also the value of the object2
+
 console.log(object3.value);
+var c = 12;
+console.log(c);
+a = [1, 2, 3, 4, 5];
+var index = 0;
+a[index] += 2;
+console.log(a);
